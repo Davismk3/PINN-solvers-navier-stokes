@@ -14,7 +14,7 @@ networks (PINNs). The governing equations are
 ∂ū/∂t + (ū⋅∇)ū = ν∇²ū - ∇p + f,   x̄ ∈ Ω, t ∈ [0,T]          (momentum conservation)
 u = 0,                            x̄ ∈ ∂Ω_x, t ∈ [0,T]       (momentum can't leave system)
 v = 0,                            x̄ ∈ ∂Ω_y, t ∈ [0,T]       (momentum can't leave system)
-u = 1.0,                          y = 0, t ∈ [0,T]          (horizontal initial velocity)
+u = 0.2⋅t,                        y = 0, t ∈ [0,T]          (horizontal initial velocity has a time dependence)
 
 We will solve for the x velovity, y velocity, and pressure (u, v, and p). We will write the solution as the trial functions
 
