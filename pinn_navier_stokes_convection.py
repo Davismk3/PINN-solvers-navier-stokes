@@ -25,7 +25,7 @@ We will solve for the x velocity, y velocity, pressure, and temperature (u, v, p
 u(x, y, t; θ) = N_u(x, y, t; θ)⋅(L - x)⋅x,   
 v(x, y, t; φ) = N_v(x, y, t; φ)⋅(D - y)⋅y, 
 p(x, y, t; ψ) = N_p(x, y, t; ψ), 
-T(x, y, t; ξ) = N_p(x, y, t; ξ), 
+T(x, y, t; ξ) = N_T(x, y, t; ξ), 
 
 for a neural network, N(x, t, t; Λ) → [u, v, p, T]. The solution must satisfy ∂ū/∂t + (ū⋅∇)ū - ν∇²ū + ∇p - f = 0, incompressibility, 
 ∂T/∂t + (ū⋅∇)T - κ⋅∇²T = 0, and the initial condition, so we will define the loss as 
