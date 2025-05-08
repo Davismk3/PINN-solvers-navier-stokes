@@ -6,8 +6,8 @@ import matplotlib.animation as anim
 from pathlib import Path
 
 # Reconstruct Model -----------------------------------------------------------
-model_path = Path("/Users/michaeldavis/Desktop/Python/PDEs/PINNs/Saved_Models")
-model_name = "navier_stokes_spiral_model_test"
+model_path = Path("file/path/for/saved/model")
+model_name = "navier_stokes_convection_model"
 model_save_path = model_path / model_name
 
 L, D, T_max = 1.0, 1.0, 1.0  # domain size and timespan 
