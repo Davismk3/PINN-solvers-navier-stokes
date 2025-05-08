@@ -20,13 +20,14 @@ v = 0,                              x̄ ∈ ∂Ω_y, t ∈ [0,T]       (vertical
 The buoyancy force f_b is modeled as:
 f_b = (0, g⋅κ⋅(T - T₀)), with T₀ = 0                          (Boussinesq body force)
 
-We will solve for the x velocity, y velocity, and pressure (u, v, and p). We will write the solution as the trial functions
+We will solve for the x velocity, y velocity, pressure, and temperature (u, v, p, and T). We will write the solution as the trial functions
 
 u(x, y, t; θ) = N_u(x, y, t; θ)⋅(L - x)⋅x,   
 v(x, y, t; φ) = N_v(x, y, t; φ)⋅(D - y)⋅y, 
 p(x, y, t; ψ) = N_p(x, y, t; ψ), 
+T(x, y, t; ξ) = N_p(x, y, t; ξ), 
 
-for a neural network, N(x, t, t; Λ) → [u, v, p]. The solution must satisfy ∂ū/∂t + (ū⋅∇)ū - ν∇²ū + ∇p - f = 0, incompressibility, 
+for a neural network, N(x, t, t; Λ) → [u, v, p, T]. The solution must satisfy ∂ū/∂t + (ū⋅∇)ū - ν∇²ū + ∇p - f = 0, incompressibility, 
 ∂T/∂t + (ū⋅∇)T - κ⋅∇²T = 0, and the initial condition, so we will define the loss as 
 
 L_1 = ∫_Ω ∫_0^T [∂u/∂t + (ū⋅∇)u - ν∇²u + ∇p - f_x]² dt dx̄,
