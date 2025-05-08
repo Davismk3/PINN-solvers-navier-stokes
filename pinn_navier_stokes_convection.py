@@ -289,8 +289,8 @@ ani = anim.FuncAnimation(fig, update, frames=N_FRAMES, blit=False, interval=50)
 plt.show()
 
 # Save ------------------------------------------------------------------------
-model_path = Path("/Users/michaeldavis/Desktop/Python/PDEs/PINNs/Saved_Models")
-model_name = "navier_stokes_spiral_model_test"
+model_path = Path("file/path/for/saved/model")
+model_name = "navier_stokes_convection_model"
 
 model_path.mkdir(parents=True, exist_ok=True)
 model_save_path = model_path / model_name
