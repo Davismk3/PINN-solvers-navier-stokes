@@ -153,7 +153,7 @@ def heat_equation_loss(x, y, t):  # we want to satisfy ∂T/∂t + (ū⋅∇)T -
     # note that (ū⋅∇)T is NOT the same as (∇⋅ū)T
     return torch.mean((T_t + (u * T_x + v * T_y) - κ * (T_xx + T_yy)) ** 2)
 
-def neumann_heat_loss(x, y, t):
+def neumann_heat_loss(x, y, t):  # we want to satisfy ∂T/∂n = 0
     x_0 = torch.zeros_like(x, requires_grad=True)
     y_0 = torch.zeros_like(y, requires_grad=True)
     x_L = torch.ones_like(x, requires_grad=True) * L
@@ -171,7 +171,7 @@ def neumann_heat_loss(x, y, t):
 
     return torch.mean(T_lef_x ** 2 + T_rig_x ** 2 + T_bot_y ** 2 + T_top_y ** 2)
 
-def initial_heat_loss():
+def initial_heat_loss():  # we want an initial hotspot in the middle of the domain
     t0 = torch.zeros_like(x_ic)
     T = T_trial(x_ic, y_ic, t0)
 
