@@ -4,6 +4,7 @@ The following repository contains scripts for solving and validating the Navier-
 
 ## Results
 
+![PINN Heat Solution](assets/convection.png)
 ![PINN Heat Solution](assets/spiral.png)
 
 ## Contents
